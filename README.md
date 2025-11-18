@@ -46,3 +46,4 @@ The UI currently persists data locally with Zustand + `localStorage`. Supabase h
 - Connect Supabase tables for tasks, deadlines, and sessions using `safeUpsert`/`safeFetch`.
 - Add auth (email/password) and multi-device sync.
 - Expand analytics (streaks, completion rates) and notifications. 
+# productivity.app
