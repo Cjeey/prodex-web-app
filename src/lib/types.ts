@@ -29,13 +29,14 @@ export interface Deadline {
 
 export interface TimetableEvent {
   id: string;
+  user_id?: string;
   title: string;
-  dayOfWeek: string;
-  startTime: string;
-  endTime: string;
+  day: number;
+  start_time: string;
+  end_time: string;
   location?: string;
   category: Category;
-  repeat?: string;
+  created_at?: string;
 }
 
 export interface FocusSession {
