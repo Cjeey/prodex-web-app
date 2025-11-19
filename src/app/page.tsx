@@ -20,8 +20,7 @@ export default function DashboardPage() {
     .sort((a, b) => new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime())
     .slice(0, 4);
   const todayLabel = format(new Date(), "EEEE, d MMM");
-  const todaysSlots = timetable.filter((slot) => slot.dayOfWeek === format(new Date(), "EEEE"));
-
+  const todaysSlots = timetable.filter((slot) => slot.day === new Date().getDay());
   const completed = tasks.filter((task) => task.status === "Done").length;
   const progress = tasks.length === 0 ? 0 : Math.round((completed / tasks.length) * 100);
   const quote = useMemo(() => {
